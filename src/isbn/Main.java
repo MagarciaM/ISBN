@@ -24,7 +24,7 @@ public class Main {
         
         for (int i = 0; i < partidos.size(); i++) {
             
-            System.out.println( i + " " + partidos.get(i));
+            System.out.println( i + "-" + partidos.get(i));
         }
         
     }
