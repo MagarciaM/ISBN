@@ -18,6 +18,7 @@ public class ISBN {
     Scanner LecturaNpartidos = new Scanner(System.in);
     Scanner LecturaNombre = new Scanner(System.in);
     Scanner LecturaVotos = new Scanner(System.in);
+    Scanner LecturaEscanios = new Scanner(System.in);
     
     public ISBN() {
 
@@ -26,16 +27,22 @@ public class ISBN {
     public ArrayList insertar() {
         
         int nPartidos;
+        int nEscanios;
         String nombre;
         int votos;
+        int escanios = 0;
         
-        System.out.println("Nº partidos");
+        System.out.println("Introduce el numero de partidos ");
 
         nPartidos = LecturaNpartidos.nextInt();
+        
+        System.out.println("Introduce el numero de escaños ");
+        
+        nEscanios = LecturaEscanios.nextInt();
 
         for (int i = 0; i < nPartidos; i++) {
 
-            System.out.println("Nombre");
+            System.out.println("Nombre del " + i + " partido.");
             nombre = LecturaNombre.nextLine();
 
             System.out.println("Cantidad votos");
@@ -43,6 +50,14 @@ public class ISBN {
 
             partidos.add(nombre);
             partidos.add(votos);
+            partidos.add(escanios);
+        }
+        
+        for (int f = 0; f < nEscanios ; f++){
+            for (int j = 1 ; j < (nPartidos*3) ; j=j+3){
+                
+            }
+            
         }
 
         return partidos;
